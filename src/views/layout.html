@@ -10,13 +10,60 @@
     	<link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
 
     	<link rel='stylesheet' href='/stylesheets/reset.css' />
-    	<link rel='stylesheet' href='/stylesheets/main.css' />
+    	<link rel='stylesheet' href='/stylesheets/style.css' />
 
     	<script src="/javascripts/cookies.js"></script>
 	</head>
 	
 	<body>
-		<%- body %>
+		<header id="Header">
+			<h1>= { <span>Dominic</span>: '<span>Pettifer</span>' };</h1>
+			<p class="blurb">Web, HTML5, CSS, JavaScript, Node.js, ASP.NET MVC, life...</p>
+			
+			<aside>
+				<ul>
+					<li class="twitter"><a href="#">Twitter</a></li>
+					<li class="github"><a href="#">Github</a></li>
+					<li class="email"><a href="#">E-mail</a></li>
+					<li class="rss"><a href="#">RSS</a></li>
+				</ul>
+			</aside>
+		</header>
+		
+		<div id="Body">
+			<section id="MainContent">
+				<%- body %>
+			</section>
+			
+			<aside id="SideBar">
+				<nav id="MainNavigation">
+					<h2>Navigation</h2>
+					<ul>
+						<li class="blog"><a href="#">Blog</a></li>
+						<li class="about"><a href="#">About Me</a></li>
+						<li class="cv"><a href="#">CV</a></li>
+						<li class="portfolio"><a href="#">Portfolio</a></li>
+						<li class="email"><a href="#">E-mail Me</a></li>
+					</ul>
+				</nav>
+				
+				<nav id="RecentArticles">
+					<h2>Recent Blog Posts</h2>
+					<ul>
+						<li><a href="#">Welcome To My Awesome Blog</a></li>
+						<li><a href="#">Some Quick Thoughts I Had While On The Train</a></li>
+						<li><a href="#">Welcome To My Awesome Blog</a></li>
+						<li><a href="#">Some Quick Thoughts I Had While On The Train</a></li>
+						<li><a href="#">Welcome To My Awesome Blog</a></li>
+						<li><a href="#">Some Quick Thoughts I Had While On The Train</a></li>
+						<li><a href="#">Welcome To My Awesome Blog</a></li>
+					</ul>
+				</nav>
+			</aside>
+		</div>
+	
+		<footer id="Footer">
+			<small>&copy; 2011 Dominic Pettifer - Stay hungry, stay foolish.</small>
+		</footer>
 	</body>
 </html>
-	
