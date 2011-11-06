@@ -1,0 +1,106 @@
+/*---- Base Styles ----*/
+
+body
+{
+	font-family: "Helvetica Neue", "Lucida Grande", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	color: #333;
+}
+
+/*---- Basic Layout ----*/
+
+#Header,
+#Body,
+#Footer
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+}
+
+#Header
+{
+	margin-bottom: 2em;
+}
+
+#Footer
+{
+	margin-top: 2em;
+}
+
+#MainContent
+{
+	float: left;
+	width: 65%;
+}
+
+#SideBar
+{
+	float: right;
+	width: 25%;
+}
+
+article > p
+{
+	margin-bottom: 1em;
+}
+
+/*---- Header ----*/
+
+#Header > hgroup
+{
+	display: inline-block;
+}
+
+#Header > hgroup > h1
+{
+	font-size: 46px;
+}
+
+#Header > hgroup > h2
+{
+	font-size: 14px;
+	margin-top: 1em;
+	margin-left: 6em;
+}
+
+#Header > aside
+{
+	float: right;
+	vertical-align: top;
+}
+
+#Header > aside li
+{
+	display: inline-block;
+}
+	
+/*---- Blogs ----*/
+
+.blogs > h1
+{
+	display: none;
+}
+
+.blogs > article
+{
+	margin-bottom: 3em;
+}
+
+.blogs > article h2
+{
+	margin-bottom: 0.5em;
+}
+
+.blogs > article time
+{
+	color: #999;
+	font-size: 12px;
+	margin-bottom: 1em;
+	display: block;
+}
+
+.blogs > article .moreLink
+{
+	margin-top: 1em;
+}

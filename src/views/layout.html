@@ -5,20 +5,30 @@
   		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
     	<title><%= title %></title>
+    	
+    	<meta name="title" content="Dominic Pettifer's Blog" />
+		<meta name="description" content="Web, HTML5, CSS, JavaScript, Node.js, ASP.NET MVC, life..." />
+		
+		<meta name="author" content="Dominic Pettifer" />
+		<meta name="Copyright" content="Copyright Dominic Pettifer 2011. All Rights Reserved." />
+		
+		<meta name="DC.title" content="Dominic Pettifer's Blog" />
+		<meta name="DC.subject" content="Web, HTML5, CSS, JavaScript, Node.js, ASP.NET MVC, life..." />
+		<meta name="DC.creator" content="Dominic Pettifer" />
 
     	<link rel="shortcut icon" href="/images/favicon.ico" />
     	<link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
 
-    	<link rel='stylesheet' href='/stylesheets/reset.css' />
-    	<link rel='stylesheet' href='/stylesheets/style.css' />
-
-    	<script src="/javascripts/cookies.js"></script>
+    	<link rel='stylesheet' href='/staticContent/stylesheets/reset.css' />
+    	<link rel='stylesheet' href='/staticContent/stylesheets/main.css' />
 	</head>
 	
 	<body>
 		<header id="Header">
-			<h1>= { <span>Dominic</span>: '<span>Pettifer</span>' };</h1>
-			<p class="blurb">Web, HTML5, CSS, JavaScript, Node.js, ASP.NET MVC, life...</p>
+			<hgroup>
+				<h1>= { <span>Dominic</span>: '<span>Pettifer</span>' };</h1>
+				<h2>Web, HTML5, CSS, JavaScript, Node.js, ASP.NET MVC, life...</h2>
+			</hgroup>
 			
 			<aside>
 				<ul>
@@ -30,10 +40,9 @@
 			</aside>
 		</header>
 		
-		<div id="Body">
-			<section id="MainContent">
-				<%- body %>
-			</section>
+		<div id="Body" class="clearfix">
+			
+			<%- body %>
 			
 			<aside id="SideBar">
 				<nav id="MainNavigation">
