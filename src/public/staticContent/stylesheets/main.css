@@ -9,7 +9,7 @@ body
 
 /*---- Basic Layout ----*/
 
-#Header,
+#Header > div,
 #Body,
 #Footer
 {
@@ -30,13 +30,13 @@ body
 
 #MainContent
 {
-	float: left;
+	display: table-cell;
 	width: 65%;
 }
 
 #SideBar
 {
-	float: right;
+	display: table-cell;
 	width: 25%;
 }
 
@@ -47,30 +47,37 @@ article > p
 
 /*---- Header ----*/
 
-#Header > hgroup
+#Header
+{
+	background-color: #DFD5CD;
+}
+
+#Header hgroup
 {
 	display: inline-block;
 }
 
-#Header > hgroup > h1
+#Header hgroup > h1
 {
-	font-size: 46px;
+	font-size: 48px;
+	color: #9E9B83;
+	text-shadow: 0 1px 0 #fff, 0 -1px 0 #000;
 }
 
-#Header > hgroup > h2
+#Header hgroup > h2
 {
 	font-size: 14px;
 	margin-top: 1em;
 	margin-left: 6em;
 }
 
-#Header > aside
+#Header aside
 {
 	float: right;
 	vertical-align: top;
 }
 
-#Header > aside li
+#Header aside li
 {
 	display: inline-block;
 }
