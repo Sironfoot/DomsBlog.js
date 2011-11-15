@@ -2,16 +2,16 @@
 
 body
 {
-	font-family: "Helvetica Neue", "Lucida Grande", Helvetica, Arial, sans-serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 16px;
-	color: #333;
+	color: #444;
+	background: url(images/background.png) left top repeat;
 }
 
 /*---- Basic Layout ----*/
 
 #Header > div,
-#Body,
-#Footer
+#Body
 {
 	margin-left: auto;
 	margin-right: auto;
@@ -20,7 +20,7 @@ body
 
 #Header
 {
-	margin-bottom: 2em;
+	margin-bottom: 3em;
 }
 
 #Footer
@@ -31,25 +31,33 @@ body
 #MainContent
 {
 	display: table-cell;
-	width: 65%;
+	width: 700px;
 }
 
 #SideBar
 {
 	display: table-cell;
-	width: 25%;
+	width: 170px
 }
 
 article > p
 {
 	margin-bottom: 1em;
+	line-height: 1.6em;
+	font-size: 14px;
 }
 
 /*---- Header ----*/
 
 #Header
 {
-	background-color: #DFD5CD;
+	background: #DFD5CD; /* -- Put image fallback here --*/
+    background: -moz-linear-gradient(top, #f0ede8, #b6a794);
+    background: -webkit-linear-gradient(top, #f0ede8, #b6a794);
+    background: -o-linear-gradient(top, #f0ede8, #b6a794);
+    background: linear-gradient(top, #f0ede8, #b6a794);
+    border-bottom: 4px solid #a18f78;
+    box-shadow: 0 0 14px #000;
 }
 
 #Header hgroup
@@ -60,15 +68,18 @@ article > p
 #Header hgroup > h1
 {
 	font-size: 48px;
-	color: #9E9B83;
-	text-shadow: 0 1px 0 #fff, 0 -1px 0 #000;
+	color: #8d8971;
+	text-shadow: 0 1px 0 #edf9ff, 0 -1px 0 #4f4d40;
+	margin: 0.2em 0 0.1em 0;
 }
 
 #Header hgroup > h2
 {
-	font-size: 14px;
-	margin-top: 1em;
-	margin-left: 6em;
+	font-size: 18px;
+	margin-left: 4.1em;
+	font-weight: normal;
+	margin-bottom: 0.5em;
+	text-shadow: 0 1px 0 #ccc;
 }
 
 #Header aside
@@ -81,6 +92,15 @@ article > p
 {
 	display: inline-block;
 }
+
+/*---- Main Content ----*/
+
+#MainContent
+{
+	padding-left: 4.6em;
+	padding-right: 20px;
+	border-right: 1px solid #c5d8e5;
+}
 	
 /*---- Blogs ----*/
 
@@ -92,22 +112,135 @@ article > p
 .blogs > article
 {
 	margin-bottom: 3em;
+	position: relative;
 }
 
 .blogs > article h2
 {
 	margin-bottom: 0.5em;
+	font-size: 18px;
+	border-bottom: 1px solid #fff;
+	margin-left: -20px;
+	padding-left: 20px;
+	margin-bottom: 1.2em;
+}
+
+.blogs > article h2 a,
+.blogs > article h2 span
+{
+	display: block;
+	margin-left: -20px;
+	padding-left: 20px;
+	border-bottom: 3px solid #b6afa4;
+	padding-bottom: 3px;
+	color: #444;
+	text-decoration: none;
 }
 
 .blogs > article time
 {
-	color: #999;
+	border: 2px solid #fff;
+	background-color: #dbcfb8;
 	font-size: 12px;
-	margin-bottom: 1em;
+	font-weight: bold;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	border-radius: 32px;
 	display: block;
+	line-height: 1.4em;
+	position: absolute;
+	top: -22px;
+	left: -70px;
+	color: #655f55;
+	text-shadow: 0 1px 0 #eee;
 }
+
+.blogs > article time span
+{
+	display: table-cell;
+	width: 60px;
+	height: 56px;
+	padding-top: 4px;
+	vertical-align: middle;
+} 
 
 .blogs > article .moreLink
 {
 	margin-top: 1em;
+}
+
+/*---- Sidebar ----*/
+
+#SideBar
+{
+	padding-left: 50px;
+}
+
+#SideBar nav
+{
+	margin-bottom: 2em;
+}
+
+#SideBar nav > h2
+{
+	font-size: 24px;
+	margin-bottom: 1em;
+	text-shadow: 0 1px 0 #fff;
+}
+
+#MainNavigation > ul > li > a
+{
+	display: inline-block;
+	font-size: 18px;
+	margin-bottom: 0.5em;
+	font-weight: bold;
+	background: url(images/blog.png) left bottom no-repeat;
+	margin-left: -35px;
+	padding-left: 35px;
+}
+
+#MainNavigation > ul > li.about > a
+{
+	background-image: url(images/about.png);
+}
+
+#MainNavigation > ul > li.cv > a
+{
+	background-image: url(images/cv.png);
+}
+
+#MainNavigation > ul > li.portfolio > a
+{
+	background-image: url(images/portfolio.png);
+}
+
+#MainNavigation > ul > li.contact > a
+{
+	background-image: url(images/contact.png);
+}
+
+#RecentArticles > ul > li
+{
+	font-size: 12px;
+	margin-bottom: 0.8em;
+	list-style-type: disc;
+	font-family: Helvetica, sans-serif;
+}
+
+/*---- Footer ----*/
+
+#Footer
+{
+	background-color: #333;
+	text-align: center;
+	height: 50px;
+	border-top: 3px solid #c4c4c4;
+}
+
+#Footer > small
+{
+	line-height: 50px;
+	color: #eee;
+	font-size: 14px;
 }
