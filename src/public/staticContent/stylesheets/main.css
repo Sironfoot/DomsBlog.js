@@ -40,13 +40,127 @@ body
 	width: 170px
 }
 
-article > p
+#MainContent p
 {
 	margin-bottom: 1em;
 	line-height: 1.6em;
 	font-size: 14px;
 }
 
+#MainContent p img
+{
+	background-color: #fff;
+	padding: 7px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	float: left;
+	margin-right: 15px;
+	margin-left: -8px;
+	margin-top: -3px;
+	margin-bottom: 5px;
+}
+
+#MainContent ul,
+#MainContent ol
+{
+	margin-bottom: 1.2em;
+	font-size: 14px;
+}
+
+#MainContent ul > li,
+#MainContent ol > li
+{
+	margin-bottom: 0.4em;
+	line-height: 1.4em;
+}
+
+#MainContent ul > li
+{
+	list-style-type: disc;
+}
+
+#MainContent blockquote
+{
+	margin-top: 2em;
+	margin-bottom: 2em;
+	font-size: 16px;
+	line-height: 1.6em;
+	padding-left: 1em;
+	padding-right: 1em;
+	border-left: 4px solid #ddd;
+}
+
+#MainContent blockquote:before
+{
+	content: "\201C";
+	position: absolute;
+	left: -1em;
+	font-size: 28px;
+}
+
+#MainContent blockquote:after
+{
+	content: "\201D";
+}
+
+#MainContent table
+{
+	width: 101%;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	margin-left: -5px;
+}
+
+#MainContent table caption
+{
+	text-align: left;
+	margin-bottom: 0.4em;
+	font-weight: bold;
+	font-size: 14px;
+	margin-left: 5px;
+}
+
+#MainContent table td,
+#MainContent table th
+{
+	border: 1px solid #ccc;
+	padding: 4px;
+	text-align: left;
+	font-size: 14px;
+	background-color: #fff;
+}
+
+#MainContent table thead th
+{
+	background-color: #fffff1;
+}
+
+#MainContent table tbody tr:nth-child(2n) td,
+#MainContent table tbody tr:nth-child(2n) th
+{
+	background-color: #fef;
+}
+
+#MainContent dl
+{
+	font-size: 14px;
+	line-height: 1.4em;
+	margin-bottom: 1.5em;
+}
+
+#MainContent dl > dt
+{
+	font-weight: bold;
+	margin-bottom: 0.3em;
+}
+
+#MainContent dl > dd
+{
+	margin-bottom: 1em;
+	margin-left: 1.2em;
+}
+
+ 
 /*---- Header ----*/
 
 #Header
@@ -62,7 +176,8 @@ article > p
 
 #Header hgroup
 {
-	display: inline-block;
+	display: table-cell;
+	width: 700px;
 }
 
 #Header hgroup > h1
@@ -84,13 +199,47 @@ article > p
 
 #Header aside
 {
-	float: right;
+	display: table-cell;
+	width: 260px;
 	vertical-align: top;
+	text-align: right;
 }
 
 #Header aside li
 {
 	display: inline-block;
+	width: 32px;
+	height: 32px;
+	margin-left: 12px;
+}
+
+#Header aside li > a
+{
+	display: block;
+	width: 32px;
+	height: 32px;
+	font-size: 0;
+	background: url(images/rss.png) left top no-repeat;
+}
+
+#Header aside li.twitter > a
+{
+	background-image: url(images/twitter.png);
+}
+
+#Header aside li.facebook > a
+{
+	background-image: url(images/facebook.png);
+}
+
+#Header aside li.google > a
+{
+	background-image: url(images/google.png);
+}
+
+#Header aside li.github > a
+{
+	background-image: url(images/github.png);
 }
 
 /*---- Main Content ----*/
@@ -109,13 +258,15 @@ article > p
 	display: none;
 }
 
-.blogs > article
+.blogs > article,
+.blogPost > article
 {
 	margin-bottom: 3em;
 	position: relative;
 }
 
-.blogs > article h2
+.blogs > article h2,
+.blogPost > article h1
 {
 	margin-bottom: 0.5em;
 	font-size: 18px;
@@ -126,7 +277,7 @@ article > p
 }
 
 .blogs > article h2 a,
-.blogs > article h2 span
+.blogPost > article h1 span
 {
 	display: block;
 	margin-left: -20px;
@@ -137,7 +288,8 @@ article > p
 	text-decoration: none;
 }
 
-.blogs > article time
+.blogs > article time,
+.blogPost > article time
 {
 	border: 2px solid #fff;
 	background-color: #dbcfb8;
@@ -156,7 +308,8 @@ article > p
 	text-shadow: 0 1px 0 #eee;
 }
 
-.blogs > article time span
+.blogs > article time span,
+.blogPost > article time span
 {
 	display: table-cell;
 	width: 60px;
@@ -170,6 +323,15 @@ article > p
 	margin-top: 1em;
 }
 
+.blogs > article > h3,
+.blogPost > article > h2
+{
+	margin-top: 1.5em;
+	margin-bottom: 0.8em;
+	border-bottom: 1px solid #999;
+	font-size: 18px;
+}
+
 /*---- Sidebar ----*/
 
 #SideBar
@@ -180,6 +342,11 @@ article > p
 #SideBar nav
 {
 	margin-bottom: 2em;
+}
+
+#SideBar a
+{
+	color: #004080;
 }
 
 #SideBar nav > h2
