@@ -23,59 +23,61 @@
     	<link rel='stylesheet' href='/staticContent/stylesheets/main.css' />
 	</head>
 	
-	<body>
-		<header id="Header">
-			<div>
-				<hgroup>
-					<h1>= { <span>Dominic</span>: '<span>Pettifer</span>' };</h1>
-					<h2>Web, HTML5, CSS, JavaScript, Node.js, ASP.NET MVC, life...</h2>
-				</hgroup>
+	<body style="height: 100%;">
+		<div class="wrapper">
+			<header id="Header">
+				<div>
+					<hgroup>
+						<h1>= { <span>Dominic</span>: '<span>Pettifer</span>' };</h1>
+						<h2>Web, HTML5, CSS, JavaScript, Node.js, ASP.NET MVC, life...</h2>
+					</hgroup>
+					
+					<aside>
+						<ul>
+							<li class="rss"><a title="RSS" href="#">RSS</a></li>
+							<li class="twitter"><a title="Follow me on Twitter" href="#">Twitter</a></li>
+							<li class="facebook"><a title="Facebook" href="#">Facebook</a></li>
+							<li class="google"><a title="Google+" href="#">Google+</a></li>
+							<li class="github"><a title="Github" href="#">Github</a></li>
+						</ul>
+					</aside>
+				</div>
+			</header>
+			
+			<div id="Body">
 				
-				<aside>
-					<ul>
-						<li class="rss"><a title="RSS" href="#">RSS</a></li>
-						<li class="twitter"><a title="Follow me on Twitter" href="#">Twitter</a></li>
-						<li class="facebook"><a title="Facebook" href="#">Facebook</a></li>
-						<li class="google"><a title="Google+" href="#">Google+</a></li>
-						<li class="github"><a title="Github" href="#">Github</a></li>
-					</ul>
+				<%- body %>
+				
+				<aside id="SideBar">
+					<nav id="MainNavigation">
+						<h2>Navigation</h2>
+						<ul>
+							<li class="blog"><a href="#">Blog</a></li>
+							<li class="about"><a href="#">About Me</a></li>
+							<li class="cv"><a href="#">CV</a></li>
+							<li class="portfolio"><a href="#">Portfolio</a></li>
+							<li class="contact"><a href="#">Contact</a></li>
+						</ul>
+					</nav>
+					
+					<nav id="RecentArticles">
+						<h2>Blog Posts</h2>
+						<ul>
+							<li><a href="#">Welcome To My Awesome Blog</a></li>
+							<li><a href="#">Some Quick Thoughts I Had While On The Train</a></li>
+							<li><a href="#">Welcome To My Awesome Blog</a></li>
+							<li><a href="#">Some Quick Thoughts I Had While On The Train</a></li>
+							<li><a href="#">Welcome To My Awesome Blog</a></li>
+							<li><a href="#">Some Quick Thoughts I Had While On The Train</a></li>
+							<li><a href="#">Welcome To My Awesome Blog</a></li>
+						</ul>
+					</nav>
 				</aside>
 			</div>
-		</header>
 		
-		<div id="Body">
-			
-			<%- body %>
-			
-			<aside id="SideBar">
-				<nav id="MainNavigation">
-					<h2>Navigation</h2>
-					<ul>
-						<li class="blog"><a href="#">Blog</a></li>
-						<li class="about"><a href="#">About Me</a></li>
-						<li class="cv"><a href="#">CV</a></li>
-						<li class="portfolio"><a href="#">Portfolio</a></li>
-						<li class="contact"><a href="#">Contact</a></li>
-					</ul>
-				</nav>
-				
-				<nav id="RecentArticles">
-					<h2>Blog Posts</h2>
-					<ul>
-						<li><a href="#">Welcome To My Awesome Blog</a></li>
-						<li><a href="#">Some Quick Thoughts I Had While On The Train</a></li>
-						<li><a href="#">Welcome To My Awesome Blog</a></li>
-						<li><a href="#">Some Quick Thoughts I Had While On The Train</a></li>
-						<li><a href="#">Welcome To My Awesome Blog</a></li>
-						<li><a href="#">Some Quick Thoughts I Had While On The Train</a></li>
-						<li><a href="#">Welcome To My Awesome Blog</a></li>
-					</ul>
-				</nav>
-			</aside>
+			<footer id="Footer">
+				<small>&copy; 2011 Dominic Pettifer - Stay hungry, stay foolish.</small>
+			</footer>
 		</div>
-	
-		<footer id="Footer">
-			<small>&copy; 2011 Dominic Pettifer - Stay hungry, stay foolish.</small>
-		</footer>
 	</body>
 </html>

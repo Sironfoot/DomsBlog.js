@@ -10,12 +10,29 @@ body
 
 /*---- Basic Layout ----*/
 
+html,
+body
+{
+	height: 100%;
+}
+
+.wrapper
+{
+	min-height: 100%;
+   	position: relative;
+}
+
 #Header > div,
 #Body
 {
 	margin-left: auto;
 	margin-right: auto;
 	width: 960px;
+}
+
+#Body
+{
+	padding-bottom: 50px;
 }
 
 #Header
@@ -26,6 +43,9 @@ body
 #Footer
 {
 	margin-top: 2em;
+	position: absolute;
+   	bottom: 0;
+   	width: 100%;
 }
 
 #MainContent
