@@ -45,19 +45,20 @@ var BlogPostSchema = new Schema({
 	collection: 'BlogPosts'
 });
 
-mongoose.model('BlogPost', BlogPostSchema)
+mongoose.model('BlogPost', BlogPostSchema);
 
 
 var BlogPost = mongoose.model('BlogPost');
 
 var blogPost = new BlogPost();
-blogPost.title = 'Hello world 2';
-blogPost.text = 'This is a test blog post';
+blogPost.title = 'Welcome to My Awesome Blog';
+blogPost.text =
+'This is a test blog post';
 blogPost.isLive = true;
 
-blogPost.save(function(err) {
-	console.log(err);
-});
+//blogPost.save(function(err) {
+//	console.log(err);
+//});
 
 	
 

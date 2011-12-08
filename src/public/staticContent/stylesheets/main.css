@@ -103,11 +103,18 @@ body
 {
 	margin-top: 2em;
 	margin-bottom: 2em;
-	font-size: 16px;
-	line-height: 1.6em;
-	padding-left: 1em;
+	margin-left: 1.5em;
+	padding-left: 0.5em;
 	padding-right: 1em;
 	border-left: 4px solid #ddd;
+	position: relative;
+}
+
+#MainContent blockquote > p
+{
+	color: #666;
+	font-size: 16px;
+	line-height: 1.6em;
 }
 
 #MainContent blockquote:before
@@ -118,9 +125,21 @@ body
 	font-size: 28px;
 }
 
-#MainContent blockquote:after
+#MainContent blockquote p:last-of-type:after
 {
-	content: "\201D";
+	content: " \201D";
+}
+
+#MainContent blockquote > footer
+{
+	font-size: 14px;
+	margin-left: 2em;
+}
+
+#MainContent blockquote > footer:before
+{
+	content: "-";
+	padding-right: 0.3em;
 }
 
 #MainContent table
@@ -266,7 +285,6 @@ body
 
 #MainContent
 {
-	padding-left: 4.6em;
 	padding-right: 20px;
 	border-right: 1px solid #c5d8e5;
 }
@@ -278,17 +296,20 @@ body
 	display: none;
 }
 
-.blogs > article,
-.blogPost > article
+article
 {
+	padding-left: 4.6em;
 	margin-bottom: 3em;
+	padding-top: 0;
+}
+
+article header
+{
 	position: relative;
 }
 
-.blogs > article h2,
-.blogPost > article h1
+article header h1
 {
-	margin-bottom: 0.5em;
 	font-size: 18px;
 	border-bottom: 1px solid #fff;
 	margin-left: -20px;
@@ -296,8 +317,8 @@ body
 	margin-bottom: 1.2em;
 }
 
-.blogs > article h2 a,
-.blogPost > article h1 span
+article h1 a,
+article h1 span
 {
 	display: block;
 	margin-left: -20px;
@@ -308,8 +329,7 @@ body
 	text-decoration: none;
 }
 
-.blogs > article time,
-.blogPost > article time
+article header time
 {
 	border: 2px solid #fff;
 	background-color: #dbcfb8;
@@ -328,23 +348,21 @@ body
 	text-shadow: 0 1px 0 #eee;
 }
 
-.blogs > article time span,
-.blogPost > article time span
+article time span
 {
 	display: table-cell;
 	width: 60px;
 	height: 56px;
 	padding-top: 4px;
 	vertical-align: middle;
-} 
+}
 
-.blogs > article .moreLink
+article .moreLink
 {
 	margin-top: 1em;
 }
 
-.blogs > article > h3,
-.blogPost > article > h2
+article h2
 {
 	margin-top: 1.5em;
 	margin-bottom: 0.8em;
