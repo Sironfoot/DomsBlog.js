@@ -26,21 +26,16 @@
 	<body style="height: 100%;">
 		<div class="wrapper">
 			<header id="Header">
-				<div>
-					<hgroup>
-						<h1>= { <span>Dominic</span>: '<span>Pettifer</span>' };</h1>
-						<h2>HTML5 / CSS / JavaScript, Node.js, ASP.NET MVC, life...</h2>
+				<div class="inner">
+					<hgroup class="website-title">
+						<h1 class="title">
+							<span class="first-name">Dominic</span>
+							<span class="last-name">Pettifer</span>
+						</h1>
+						<h2 class="sub-title">
+							HTML5 / CSS / JavaScript, Node.js, ASP.NET MVC, life...
+						</h2>
 					</hgroup>
-					
-					<aside>
-						<ul>
-							<li class="rss"><a title="RSS" href="#">RSS</a></li>
-							<li class="twitter"><a title="Follow me on Twitter" href="#">Twitter</a></li>
-							<li class="facebook"><a title="Facebook" href="#">Facebook</a></li>
-							<li class="google"><a title="Google+" href="#">Google+</a></li>
-							<li class="github"><a title="Github" href="#">Github</a></li>
-						</ul>
-					</aside>
 				</div>
 			</header>
 			
@@ -48,7 +43,7 @@
 				
 				<%- body %>
 				
-				<aside id="SideBar">
+				<div id="SideBar">
 					<nav id="MainNavigation">
 						<h2>Navigation</h2>
 						<ul>
@@ -72,11 +67,22 @@
 							<li><a href="#">Welcome To My Awesome Blog</a></li>
 						</ul>
 					</nav>
-				</aside>
+					
+					<aside id="SocialNetworks">
+						<h2>Find me on the web</h2>
+						<ul>
+							<li class="rss"><a title="RSS" href="#">RSS</a></li>
+							<li class="twitter"><a title="Follow me on Twitter" href="#">Twitter</a></li>
+							<li class="facebook"><a title="Facebook" href="#">Facebook</a></li>
+							<li class="google"><a title="Google+" href="#">Google+</a></li>
+							<li class="github"><a title="Github" href="#">Github</a></li>
+						</ul>
+					</aside>
+				</div>
 			</div>
 		
 			<footer id="Footer">
-				<small>&copy; 2011 Dominic Pettifer - Stay hungry, stay foolish.</small>
+				<small>&copy; Dominic Pettifer 2011 - Stay hungry, stay foolish.</small>
 			</footer>
 		</div>
 	</body>

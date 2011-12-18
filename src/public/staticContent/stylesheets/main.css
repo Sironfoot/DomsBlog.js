@@ -33,6 +33,7 @@ body
 #Body
 {
 	padding-bottom: 50px;
+	position: relative;
 }
 
 #Header
@@ -213,21 +214,27 @@ body
     box-shadow: 0 0 14px #000;
 }
 
-#Header hgroup
+#Header .website-title
 {
 	display: table-cell;
 	width: 700px;
 }
 
-#Header hgroup > h1
+#Header .website-title > .title
 {
 	font-size: 48px;
 	color: #8d8971;
 	text-shadow: 0 1px 0 #edf9ff, 0 -1px 0 #4f4d40;
 	margin: 0.2em 0 0.1em 0;
+	font-weight: bold;
 }
 
-#Header hgroup > h2
+#Header .website-title > .title .first-name:before { content: "= { "; }
+#Header .website-title > .title .first-name:after { content: ": "; }
+#Header .website-title > .title .last-name:before { content: "'"; }
+#Header .website-title > .title .last-name:after { content: "' };"; }
+
+#Header .website-title > .sub-title
 {
 	font-size: 18px;
 	margin-left: 4.1em;
@@ -236,15 +243,22 @@ body
 	text-shadow: 0 1px 0 #ccc;
 }
 
-#Header aside
+#SocialNetworks
 {
-	display: table-cell;
 	width: 260px;
 	vertical-align: top;
 	text-align: right;
+	position: absolute;
+	top: -150px;
+	right: 0;
 }
 
-#Header aside li
+#SocialNetworks h2
+{
+	display: none;
+}
+
+#SocialNetworks li
 {
 	display: inline-block;
 	width: 32px;
@@ -252,7 +266,7 @@ body
 	margin-left: 12px;
 }
 
-#Header aside li > a
+#SocialNetworks li > a
 {
 	display: block;
 	width: 32px;
@@ -261,22 +275,22 @@ body
 	background: url(images/rss.png) left top no-repeat;
 }
 
-#Header aside li.twitter > a
+#SocialNetworks li.twitter > a
 {
 	background-image: url(images/twitter.png);
 }
 
-#Header aside li.facebook > a
+#SocialNetworks li.facebook > a
 {
 	background-image: url(images/facebook.png);
 }
 
-#Header aside li.google > a
+#SocialNetworks li.google > a
 {
 	background-image: url(images/google.png);
 }
 
-#Header aside li.github > a
+#SocialNetworks li.github > a
 {
 	background-image: url(images/github.png);
 }
