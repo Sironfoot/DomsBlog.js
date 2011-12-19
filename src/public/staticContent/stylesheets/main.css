@@ -8,6 +8,11 @@ body
 	background: url(images/background.png) left top repeat;
 }
 
+img, embed, object, video
+{
+	width: 100%;
+}
+
 /*---- Basic Layout ----*/
 
 html,
@@ -22,12 +27,14 @@ body
    	position: relative;
 }
 
-#Header > div,
+#Header > div.inner,
 #Body
 {
 	margin-left: auto;
 	margin-right: auto;
-	width: 960px;
+	max-width: 1200px;
+	padding-left: 2%; /* approx 20px on 1024px screen */
+	padding-right: 2%; /* approx 20px on 1024px screen */
 }
 
 #Body
@@ -52,33 +59,87 @@ body
 #MainContent
 {
 	display: table-cell;
-	width: 700px;
+	width: 77.083333333333%; /* 960px / 740px */
+	padding-right: 2.083333333333%; /* 960px / 20px */
+	border-right: 1px solid #c5d8e5;
 }
 
 #SideBar
 {
 	display: table-cell;
-	width: 170px
+	width: 22.916666666667%; /* 960px / 220px  */
+	padding-left: 5.208333333333%; /* 960px / 50px */
 }
 
 #MainContent p
 {
 	margin-bottom: 1em;
-	line-height: 1.6em;
+	line-height: 1.65em;
 	font-size: 14px;
 }
 
-#MainContent p img
+#MainContent figure
 {
 	background-color: #fff;
 	padding: 7px;
 	border: 1px solid #ddd;
 	border-radius: 4px;
+	margin: 0 auto 20px auto;
+	width: 90%;
+	
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+#MainContent figure:hover
+{
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+	
+}
+
+#MainContent figure > a
+{
+	display: block;
+	line-height: 0;
+}
+
+#MainContent figure > figcaption
+{
+	font-size: 14px;
+	margin-top: 5px;
+	text-align: center;
+}
+
+#MainContent figure > figcaption > small
+{
+	display: block;
+	margin-top: 8px;
+	font-size: 11px;
+	color: #aaa;
+}
+
+#MainContent figure.left,
+#MainContent figure.right
+{
+	width: 40%;
+	margin-top: -3px;
+	margin-bottom: 5px;
+}
+
+#MainContent figure.left
+{
 	float: left;
 	margin-right: 15px;
 	margin-left: -8px;
-	margin-top: -3px;
-	margin-bottom: 5px;
+}
+
+#MainContent figure.right
+{
+	float: right;
+	margin-left: 15px;
+	margin-right: -8px;
 }
 
 #MainContent ul,
@@ -250,7 +311,7 @@ body
 	text-align: right;
 	position: absolute;
 	top: -150px;
-	right: 0;
+	right: 20px;
 }
 
 #SocialNetworks h2
@@ -296,12 +357,6 @@ body
 }
 
 /*---- Main Content ----*/
-
-#MainContent
-{
-	padding-right: 20px;
-	border-right: 1px solid #c5d8e5;
-}
 	
 /*---- Blogs ----*/
 
@@ -385,11 +440,6 @@ article h2
 }
 
 /*---- Sidebar ----*/
-
-#SideBar
-{
-	padding-left: 50px;
-}
 
 #SideBar nav
 {
