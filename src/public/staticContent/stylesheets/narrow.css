@@ -1,0 +1,90 @@
+@media screen and (max-width: 800px) {
+
+	#Header
+	{
+		min-height: 100px;
+	}
+
+	#Header .website-title > .title
+	{
+		font-size: 36px;
+	}
+	
+	#Header .website-title > .sub-title
+	{
+		font-size: 12px;
+		font-weight: bold;
+	}
+	
+	#Header > div.inner, #Body
+	{
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	
+	#MainContent
+	{
+		width: 100%;
+		border-right: none;
+		padding-right: 50px;
+	}
+	
+	article
+	{
+		padding-left: 50px;
+	}
+	
+	article header time
+	{
+		width: 50px;
+		height: 50px;
+		font-size: 11px;
+		top: -16px;
+		left: -58px;
+	}
+	
+	article time span
+	{
+		width: 50px;
+		height: 47px;
+		padding-top: 3px;
+	}
+
+	#SideBar { width: 0; padding: 0; }
+	#SocialNetworks,
+	#RecentArticles { display: none }
+	
+	#MainNavigation
+	{
+		position: absolute;
+		top: -80px;
+		left: 0;
+		right: 0;
+		padding-left: 50px;
+	}
+	
+	#MainNavigation > h2
+	{
+		display: none;
+	}
+	
+	#MainNavigation > ul > li
+	{
+		display: inline-block;
+		
+	}
+	
+	#MainNavigation > ul > li > a
+	{
+		display: inline;
+		background: none !important;
+		padding: 10px !important;
+		margin-left: 0 !important;
+	}
+	
+	#MainNavigation > ul > li:first-child > a
+	{
+		padding-left: 0 !important;
+	}
+	
+}

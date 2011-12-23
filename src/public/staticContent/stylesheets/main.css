@@ -272,7 +272,7 @@ body
     background: -o-linear-gradient(top, #f0ede8, #b6a794);
     background: linear-gradient(top, #f0ede8, #b6a794);
     border-bottom: 4px solid #a18f78;
-    box-shadow: 0 0 14px #000;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5);
 }
 
 #Header .website-title
